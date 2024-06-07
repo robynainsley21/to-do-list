@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- stylesheet -->
-     <link rel="stylesheet" href="css/styles.css">
-    <title>To-do List</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <div><h1>To-do List</h1></div>
-        <div class="input-box">
-            <button sorting>Sorting</button>
-            <input type="text" input-item placeholder="Add items to your to do list">
-            <button add-item>Add</button>
-        </div>
-        <div list-box>
+      <h1>To-Do List</h1>
+      <div class="input-box">
+        <button onclick="sortTodos()">Sort</button>
+        <input type="text" id="newTodo" placeholder="Add new item" />
+        <button onclick="addTodo()">Add</button>
+      </div>
 
-            <!-- <div class="list-item">
-                <input type="checkbox">
-                <p>this is an item</p>
-                <button class="del-btn" del-btn>X</button>
-            </div> -->
-
-        </div>
+      <ul id="todoList"></ul>
     </div>
     <script src="script/script.js"></script>
-</body>
+  </body>
 </html>
