@@ -1,63 +1,76 @@
 *,
 *::before,
 *::after{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 :root{
-    --primary: #FABB51;
-    --secondary: #3E8E7E;
-    --tertiary: #7CD1B8;
-    --alt: #C5EBAA;
-    --bg: #FAEDC6;
+    --primary: #98D8AA ;
+    --secondary: #FFF2CC ;
+    --alternative: #fbbe95 ;
+    --bg: #d6e9f3;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 5rem;
+    background-color: var(--secondary);
 }
 
-.container{
-    background-color: var(--bg);
-    border: 1px solid;
-    padding: 3rem ;
-}
-
-:is(button, input, .list-item){
-    border-radius: 5px;
-    border: 1px solid;
-}
-
-button{
-    padding: .6rem 1rem;
-    background-color: var(--tertiary);
-}
-
-input{
-    padding: .6rem 2rem;
-}
-
-h1{
+.container {
+    max-width: 400px;
+    margin: 50px auto;
     text-align: center;
-    padding: .7rem;
+    padding: 3rem;
+    background-color: var(--bg);
 }
 
-.list-item{
-    padding: .6rem;
-    margin-top: 1rem;
+:is(.container, input, button){
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.input-box{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--alt);
+    justify-content: center;
 }
 
-.del-btn{
-    width: 2.5rem;
-    display: flex;
-    justify-content: center;
+input[type="text"] {
+    width: 70%;
+    padding: .6rem;
+}
+
+button {
+    padding: .6rem .9rem;
+    margin: 5px;
     background-color: var(--primary);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: var(--alternative);
+    padding: 10px;
+    margin: 5px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+li.completed {
+    text-decoration: line-through;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
 }
